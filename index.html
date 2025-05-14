@@ -10,27 +10,68 @@
 
 <body>
     <header>
-        <h1><img src="Logo.svg" alt="Logo da Alura Dev" /></h1>
+        <h1>
+            <img src="img/Logo.svg" class="logo_alura" alt="Logo da Alura Dev" />
+        </h1>
         <input type="text" name="buscar" id="buscar" placeholder="Busque por algo" />
-        <div class="perfil">
-            <img src="Photo.svg" alt="Foto do perfil" />
+         <div class="perfil">
+            <img src="img/Photo.svg" alt="Foto do perfil" />
             <p>Marcos</p>
         </div>
     </header>
-    <main>
+    <div id="container">
         <nav>
-            <h3 style="color: red">MENU</h3>
-            <div class="code">
-                <img src="icon_code.svg" alt="" id="icon_code" />
-                <P>Editor de código</P>
-            </div>
-            <div class="comunidade">
-                <img src="icon_users.svg" alt="" id="icon_users"/>
-                <P>Comunidade</P>
+            <h2 class="sidebar_title">Menu</h2>
+            <div class="navegacao">
+                <div class="sidebar_item">
+                    <div class="sidebar_code">
+                        <img src="img/icon_code.svg" alt="Ícone de editor de código" class="menu_code" id="icon_code" />
+                    </div>
+                    <span class="sidebar_text">Editor de código</span>
+                </div>
+                <div class="sidebar_item">
+                    <div class="sidebar_comunidade">
+                        <img src="img/icon_users.svg" alt="Ícone da comunidade" class="menu_comunidade"
+                            id="icon_users" />
+                    </div>
+                    <span class="sidebar_text">Comunidade</span>
+                </div>
             </div>
         </nav>
-    </main>
+        <main>
+            <section class="code_area">
+                <div class="border">
+                    <img src="img/mac_buttons.svg" id="botoes_controler" alt="Botões de controle de janela do Mac" />
+                    <textarea name="codigo" id="codigo" spellcheck="false"></textarea>
+                </div>
+                <button class="botao_highlight">Visualizar com o highlight</button>
+            </section>
+        </main>
+        
+        <aside>
+            <h2 class="sidebar_projeto">Seu projeto</h2>
+            <div class="projeto">
+                <input type="text" name="nome_projeto" class="nome_projeto" id="nome_projeto"
+                    placeholder="Nome do seu projeto">
+                <textarea name="descricao_projeto" class="descricao_projeto" id="descricao_projeto"
+                    placeholder="Descrição do seu projeto"></textarea>
+            </div>
+            <h2 class="sidebar_projeto">Personalização</h2>
+            <div class="personalizacao">
+                <label for="codigo_option">Linguagem:</label>
+                <select name="codigo_option" class="codigo_option" id="codigo_option">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </select>
+                <div class="container_color">
+                    <input type="color" name="cor_de_fundo" id="cor_de_fundo">
+                </div>
 
+            </div>
+            <button class="botao_salvar">Salvar projeto</button>
+        </aside>
+    </div>
 </body>
 
 </html>
